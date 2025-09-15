@@ -45,6 +45,12 @@ defmodule PhoenixTutorialWeb.Layouts do
       <div class="flex-none">
         <ul class="flex flex-column px-1 space-x-4 items-center">
           <li>
+            <.link navigate={~p"/todos"} class="btn btn-ghost">Todos</.link>
+          </li>
+          <li>
+            <.link navigate={~p"/users"} class="btn btn-ghost">Users</.link>
+          </li>
+          <li>
             <a href="https://phoenixframework.org/" class="btn btn-ghost">Website</a>
           </li>
           <li>
@@ -63,7 +69,7 @@ defmodule PhoenixTutorialWeb.Layouts do
     </header>
 
     <main class="px-4 py-20 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-2xl space-y-4">
+      <div class="mx-auto max-w-full space-y-4">
         {render_slot(@inner_block)}
       </div>
     </main>

@@ -18,6 +18,7 @@ defmodule PhoenixTutorialWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    live "/todos", TodosLive
     live "/users", UsersLive
   end
 
